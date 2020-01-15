@@ -1,0 +1,7 @@
+F 828,234,234
+R 235 33
+C 0,0,0 
+NO ./here.png
+SO ./there.png
+EA ./east.png
+WE ./west.png
