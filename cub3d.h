@@ -6,7 +6,7 @@
 /*   By: darodrig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/23 18:45:46 by darodrig          #+#    #+#             */
-/*   Updated: 2020/01/15 12:19:55 by darodrig         ###   ########.fr       */
+/*   Updated: 2020/01/20 15:58:54 by darodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,9 +88,10 @@ typedef struct	s_circ
 
 typedef struct	s_map
 {
-	int			x;
-	int			y;
-
+	float		x;
+	float		y;
+	float		dir;
+	float		**walls;
 	int			w;
 	int			h;
 }				t_map;
@@ -114,6 +115,11 @@ typedef struct	s_game
 	char		*mapstr;
 	int			mapw;
 	t_map		*map;
+	int			up;
+	int			down;
+	int			left;
+	int			right;
+
 }				t_game;
 
 int				rgb_int(int red, int green, int blue);
@@ -126,4 +132,7 @@ char			*ft_strdup(const char *s1);
 char			*ft_strjoin(const char *s1, const char *s2);
 t_map			*create_map(t_game *game);
 int				locate_start_point(t_game *game);
+int				toarray(t_game *game);
+void			testpr(t_game *game);
+int				ft_isalpha(char c);
 #endif
