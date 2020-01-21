@@ -6,12 +6,12 @@
 #    By: darodrig <darodrig@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/09 13:22:42 by darodrig          #+#    #+#              #
-#    Updated: 2020/01/14 16:39:10 by darodrig         ###   ########.fr        #
+#    Updated: 2020/01/21 14:36:53 by darodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			=	ft_cub3d.c get_next_line.c get_next_line_utils.c map.c \
-					libft.c logic.c
+					libft.c logic.c array.c utils.c put.c
 OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc

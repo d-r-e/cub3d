@@ -6,7 +6,7 @@
 /*   By: darodrig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 16:04:16 by darodrig          #+#    #+#             */
-/*   Updated: 2020/01/15 12:05:59 by darodrig         ###   ########.fr       */
+/*   Updated: 2020/01/21 15:51:26 by darodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int		check_r(char *line, t_game *game)
 		return (-1);
 	if (game->hres > 2880 / 2 || game->wres > 5120 / 2)
 	{
-		game->hres = 2880 / 2;
-		game->wres = 5120 / 2;
+		game->hres = RES_H;
+		game->wres = RES_W;
 	}
 	return (0);
 }
@@ -111,7 +111,7 @@ char	*ft_cutspaces(char *str)
 	{
 		if (str[i] != ' ')
 			new[j++] = str[i];
-	   i++;	
+		i++;
 	}
 	new[j] = '\0';
 	return (new);
@@ -138,7 +138,6 @@ int		get_map(char *line, t_game *game, int fd)
 	char	*ln;
 
 	game->mapstr = ft_strdup(line);
-	ft_putstr(line);
 	if ((maplen = count_ones(line)) < 3)
 		return (-1);
 	while ((get_next_line(fd, &ln)) > 0)

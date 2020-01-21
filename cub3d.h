@@ -6,7 +6,7 @@
 /*   By: darodrig <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/23 18:45:46 by darodrig          #+#    #+#             */
-/*   Updated: 2020/01/20 15:58:54 by darodrig         ###   ########.fr       */
+/*   Updated: 2020/01/21 15:55:18 by darodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@
 # define KEY_MAJ	257
 # define KEY_ESC	53
 # define KEY_TAB	48
-# define RES_W	1920
-# define RES_H	1080
+# define RES_W	2560
+# define RES_H	1140
 # define X_EVENT_KEY_PRESS		2
 # define X_EVENT_KEY_RELEASE	3
 # define X_EVENT_MOUSE_PRESS	4
@@ -135,4 +135,7 @@ int				locate_start_point(t_game *game);
 int				toarray(t_game *game);
 void			testpr(t_game *game);
 int				ft_isalpha(char c);
+void			putsq(t_game *game, int x, int y);
+void            put_circle(t_game *game, t_circ c, int color);
+int				exit_game(t_game *game);
 #endif
