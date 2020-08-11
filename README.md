@@ -4,4 +4,4 @@ Raycasting is a method to project a 3D illusion based on a 2D map and calculatin
 It is highly efficient as it doesn't need an actual 3D engine to produce 3D images.
 
 ![Wolfenstein 3D](ecwolf_fullres.png)
-Format: ![Alt Text](url)
+
